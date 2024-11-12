@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: url("/ExamenMC/imagenes/Error_pagina.jpeg") center/cover no-repeat;
+}
+
+.contenedor-error {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7); 
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #39c753;
+    margin-bottom: 20px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #5bc0de;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #31b0d5;
+}

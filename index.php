@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio de Sesión</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="CSS/Estilos.css">
 </head>
 <body>
 
@@ -24,7 +24,7 @@
             <span class="circulo verde"></span>
         </div>
         <h2>Login</h2>
-        <form action="procesar_login.php" method="POST">
+        <form action="Procesar_login.php" method="POST" autocomplete="off">
             <div class="campo">
                 <label for="usuario">Nombre de usuario</label>
                 <input type="text" id="usuario" name="usuario" required>

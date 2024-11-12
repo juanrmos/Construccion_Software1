@@ -2,7 +2,7 @@
 <?php
     session_start();
     if (!isset($_SESSION["usuario"])) {
-        header('location: http://127.0.0.1/ExamenMC/index.php');
+        header('location: index.php');
         exit();
     }
     if (isset($_GET['logout'])) {
@@ -21,10 +21,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error Error</title>
+    <link rel="stylesheet" href="CSS/Pagina_error.css">
 </head>
 <body>
-    <h1> Vuelva a intentarlo <h1>
-    <a href = "clave_error.php?logout=true"> Ir a inicio <a>
-
+    <div class="contenedor-error">
+        <h1>Al parecer algo salió mal...</h1>
+        <a href="Pagina_error.php?logout=true">Volver a inicio</a>
+    </div>
 </body>
 </html>

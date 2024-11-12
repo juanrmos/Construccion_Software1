@@ -1,7 +1,11 @@
 <?php
-// procesar_login.php
 session_start();
 
+
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header("Location: index.php");
+    exit();
+}
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -11,17 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($usuario === "usuario" && $contrasena === "contrasena123") {
         $_SESSION['usuario'] = $usuario;
         $_SESSION['contrasena'] = $contrasena;
-        header('location: http://127.0.0.1/ExamenMC/Principal.php');
-        exit();
-
+        header('location: Pagina_carga.php?status=success');
     } else {
-        header('location: http://127.0.0.1/ExamenMC/clave_error.php');
+        header('location: Pagina_carga.php?status=error');
         $_SESSION['usuario'] = $usuario;
-        exit();
     }
-    //Cargar nuevamente las variables al volver a pagina de inicio.
+    exit();
 }
-
-
 ?>
+
 
