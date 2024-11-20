@@ -10,7 +10,7 @@ body {
     align-items: flex-end;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background: url("/ExamenMC/imagenes/Error_pagina.jpeg") center/cover no-repeat;
+    background: url("../images/error_pagina.jpeg") center/cover no-repeat;
 }
 
 .contenedor-error {

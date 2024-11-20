@@ -1,14 +1,19 @@
 <?php
 session_start();
+require_once $_SERVER['DOCUMENT_ROOT'].'/controllers/verificar_sesion.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/etc/config.php';
 
-
+if (!isset($_SESSION["usuario"])) {
+    header('Location: '.get_urlBase('index.php'));
+    exit();
+}
 
 $status = $_GET['status'] ?? 'error';
 
 if ($status === 'success') {
-    $redirectURL = 'Principal.php';
+    $redirectURL = get_views('principal.php');
 } else {
-    $redirectURL = 'Pagina_error.php';
+    $redirectURL = get_views('pagina_error.php');
 }
 ?>
 <!DOCTYPE html>
@@ -17,7 +22,7 @@ if ($status === 'success') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cargando...</title>
-    <link rel="stylesheet" href="CSS/Pagina_carga.css">
+    <link rel="stylesheet" href="<?php echo get_urlBase('css/pagina_carga.css'); ?>">
 </head>
 <body>
     <div class="animacion-carga">

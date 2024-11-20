@@ -1,11 +1,16 @@
 <?php
     session_start();
+    require_once $_SERVER['DOCUMENT_ROOT'].'/controllers/verificar_sesion.php';
+    require_once $_SERVER['DOCUMENT_ROOT'].'/etc/config.php';
+
     if (isset($_SESSION["contrasena"])) {
-        header('location: Principal.php');
+        header('Location: '.get_views('principal.php'));
         exit();
     }
-?>
 
+    require_once $_SERVER['DOCUMENT_ROOT'].'/models/connect/conexion.php';
+
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -13,7 +18,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio de Sesión</title>
-    <link rel="stylesheet" href="CSS/Estilos.css">
+    <link rel="stylesheet" href="<?php echo get_urlBase('css/estilos.css'); ?>">
 </head>
 <body>
 
@@ -24,7 +29,7 @@
             <span class="circulo verde"></span>
         </div>
         <h2>Login</h2>
-        <form action="Procesar_login.php" method="POST" autocomplete="off">
+        <form action= "<?php echo get_controllers('procesar_login.php'); ?>" method="POST" autocomplete="off">
             <div class="campo">
                 <label for="usuario">Nombre de usuario</label>
                 <input type="text" id="usuario" name="usuario" required>
@@ -45,5 +50,5 @@
 </html>
 
 
-<!-- Usuario: usuario
-    .Contraseña: contrasena123-->
+<!-- Usuario: admin
+    .Contraseña: 12345 -->
