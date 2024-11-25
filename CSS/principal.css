@@ -1,4 +1,28 @@
-/* Estilos específicos para principal.php */
+
+/* Estilo del contenedor principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 60px); /* Resta la altura de la barra de navegación */
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    color: #333; /* Color oscuro para contraste */
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: #666; /* Color gris claro */
+    line-height: 1.5; /* Mejora la legibilidad */
+}
+
+
 .navbar {
     position: fixed;
     top: 0;
@@ -48,6 +72,6 @@
 }
 
 .container {
-    margin-top: 80px; /* Ajusta según la altura de la barra de navegación */
+    margin-top: 0px; /* Ajusta según la altura de la barra de navegación */
     padding: 20px;
 }

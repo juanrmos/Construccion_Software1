@@ -1,0 +1,62 @@
+/* Contenedor de la tabla */
+.table-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Título de la tabla */
+.table-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Tabla */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 12px;
+}
+
+.custom-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.custom-table td {
+    background-color: #f9f9f9;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover para filas */
+.custom-table tr:hover {
+    background-color: #dff0d8;
+    cursor: pointer;
+}
+
+/* Mensaje de error */
+.error-message {
+    color: #ff0000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}

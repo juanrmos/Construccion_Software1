@@ -20,12 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php
     } else {
         $tmpdatusuario = isset($_POST["datusuario"]) ? $_POST["datusuario"] : '';
-        $conexion = new  conexion($host, $namedb, $userdb, $passwordb);
+        $conexion = new  conexion(DB_HOST,DB_NAME,DB_USER,DB_PASS);
         $pdo = $conexion->obtenerConexion();
 
         if (isset($_POST["custId"])) {
             try {
-                $stmt = $pdo->prepare("UPDATE usuarios SET username = ?, password = ?, perfil = ?, WHERE id = ?");
+                $stmt = $pdo->prepare("UPDATE usuarios SET username = ?, password = ?, perfil = ? WHERE id = ?;"); //!ERROR AQUI
                 $stmt->execute([$_POST["datusuario"], $_POST["datpassword"], $_POST["datperfil"], $_POST["custId"]]);
                 echo "<div class='success-message'>Usuario modificado correctamente.</div>";
             } catch (PDOException $e) {

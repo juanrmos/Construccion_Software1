@@ -18,6 +18,7 @@ $opcion = isset($_GET['opcion']) ? $_GET['opcion'] : 'inicio';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principal - Kayay eco</title>
     <link rel="stylesheet" href="<?php echo get_urlBase('css/estilos_general.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_urlBase('css/principal.css'); ?>">
 </head>
 <body>
     <nav class="navbar">
@@ -57,7 +58,7 @@ $opcion = isset($_GET['opcion']) ? $_GET['opcion'] : 'inicio';
         if (isset($_GET['opcion'])) {
             switch ($_GET['opcion']) {
                 case 'ver':
-                    echo "<iframe src='".get_views("verdatos.php")."' frameborder='0' style='width:100%; height:600px;'></iframe>";
+                    echo "<iframe src='".get_controllers("controladorUsuario.php")."' frameborder='0' style='width:100%; height:600px;'></iframe>";
                     break;
 
                 case 'ingresar':

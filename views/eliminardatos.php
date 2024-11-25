@@ -10,7 +10,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/models/connect/conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tmpdatusuario  = $_POST["datusuario"];
-    $conexion = new  conexion($host,$namedb,$userdb,$passwordb);
+    $conexion = new  conexion(DB_HOST,DB_NAME,DB_USER,DB_PASS);
     $pdo = $conexion->obtenerConexion();
     try {
         $stmt = $pdo->prepare("Delete FROM usuarios WHERE username = ?");
