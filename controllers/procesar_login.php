@@ -3,7 +3,7 @@ session_start();
 require_once $_SERVER['DOCUMENT_ROOT'].'/etc/config.php';
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header('Location: '.get_urlBase('index.php'));
+    header('Location: '.get_views('vistaInicioSesion.php'));
     exit();
 }
 

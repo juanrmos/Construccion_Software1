@@ -7,6 +7,7 @@ verificar_sesion();
 cerrar_sesion();
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/models/connect/conexion.php';
+require $_SERVER['DOCUMENT_ROOT'].'/controllers/controladorPrincipal.php';
 
 $opcion = isset($_GET['opcion']) ? $_GET['opcion'] : 'inicio';
 ?>
@@ -19,8 +20,10 @@ $opcion = isset($_GET['opcion']) ? $_GET['opcion'] : 'inicio';
     <title>Principal - Kayay eco</title>
     <link rel="stylesheet" href="<?php echo get_urlBase('css/estilos_general.css'); ?>">
     <link rel="stylesheet" href="<?php echo get_urlBase('css/principal.css'); ?>">
+    <link rel="stylesheet" href="<?php echo get_urlBase('css/gestion_usuarios.css'); ?>">
 </head>
 <body>
+    <!-- Navegación -->
     <nav class="navbar">
         <div class="navbar-brand">
             <a href="principal.php">Kayay eco</a>
@@ -32,8 +35,10 @@ $opcion = isset($_GET['opcion']) ? $_GET['opcion'] : 'inicio';
         </div>
     </nav>
 
+    <!-- Contenido principal -->
     <main class="content">
-        <?php 
+        <?php
+        // Contenido general basado en la opción seleccionada
         if ($opcion === 'inicio') {
             echo "<h1>Bienvenido a Kayay eco</h1>";
             echo "<p>
@@ -55,25 +60,6 @@ $opcion = isset($_GET['opcion']) ? $_GET['opcion'] : 'inicio';
             ";
         }
 
-        if (isset($_GET['opcion'])) {
-            switch ($_GET['opcion']) {
-                case 'ver':
-                    echo "<iframe src='".get_controllers("controladorUsuario.php")."' frameborder='0' style='width:100%; height:600px;'></iframe>";
-                    break;
-
-                case 'ingresar':
-                    echo "<iframe src='".get_views("ingresardatos.php")."' frameborder='0' style='width:100%; height:600px;'></iframe>";
-                    break;
-
-                case 'modificar':
-                    echo "<iframe src='".get_views("modificardatos.php")."' frameborder='0' style='width:100%; height:600px;'></iframe>";
-                    break;
-
-                case 'eliminar':
-                    echo "<iframe src='".get_views("eliminardatos.php")."' frameborder='0' style='width:100%; height:600px;'></iframe>";
-                    break;
-            }
-        }
         ?>
     </main>
 </body>

@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
-<link rel="stylesheet" href="<?php echo get_urlBase('css/gestion_usuarios.css'); ?>">
+<!-- <link rel="stylesheet" href="<?php echo get_urlBase('css/gestion_usuarios.css'); ?>">
 <form action="" method="POST">
     <label for ="datusuario"> Usuario </label>
     <input type="text" name="datusuario" id="datusuario" value=""> 
@@ -41,4 +41,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br>
     <button type="submit">Registrar</button>
 </form>
-<body>
+<body> -->

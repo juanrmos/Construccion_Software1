@@ -24,11 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-<link rel="stylesheet" href="<?php echo get_urlBase('css/gestion_usuarios.css'); ?>">
+<!-- <link rel="stylesheet" href="<?php echo get_urlBase('css/gestion_usuarios.css'); ?>">
 <form action="" method="POST">
     <label for ="datusuario"> Ubique el usuario a eliminar </label>
     <input type="text" name="datusuario" id="datusuario"> 
     <br>
     <button type="submit">Eliminar usuario</button>
-</form>
+</form> -->
 

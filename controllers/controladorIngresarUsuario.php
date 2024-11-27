@@ -22,12 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $modeloUsuario -> insertarUsuario($tmpdatusuario, $tmpdatpassword, $tmpdatperfil);
         echo "usuario registrado con exito";
     } catch (PDOexception $e){
-        $mensaje = "hubo un error <br>";
+        $mensaje = "hubo un error <br>".$e->getMessage();
         
     }
-    exit ();
+    
 }
 
-
+mostrarFormularioIngreso($mensaje);
 
 ?>
