@@ -42,7 +42,6 @@ public  function modificarUsuario($id, $username, $password, $perfil)
     {
         $query = "UPDATE usuarios SET username = :username, password = :password, perfil = :perfil WHERE id = :id";
         $stmt =  $this -> conexion -> prepare($query);
-        $stmt =  $this -> conexion -> prepare($query);
         $stmt ->bindParam(':id', $id);
         $stmt ->bindParam(':username', $username);
         $stmt ->bindParam(':password', $password);

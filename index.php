@@ -5,7 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/etc/config.php';
 
 if (isset($_SESSION["contrasena"])) {
     
-    header('Location: '.get_views('principal.php'));
+    header('Location: '.get_controllers('controladorPrincipal.php'));
 } else {
     
     header('Location: '.get_views('vistaInicioSesion.php'));

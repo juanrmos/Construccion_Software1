@@ -11,7 +11,9 @@ function get_path($type,$arg1) {
     $basePaths = ['base'=>URL_BASE,
     'views'=>URL_BASE.'views/',
     'models'=>URL_BASE.'models/',
-    'controllers'=>URL_BASE.'controllers/'];
+    'controllers'=>URL_BASE.'controllers/',
+    'javascript'=>URL_BASE.'javascript/'];
+    
     return $basePaths[$type].$arg1;
 }
 
@@ -34,6 +36,17 @@ function get_controllers($arg1) {
     return get_path('controllers',$arg1);
 }
 
+function get_java($arg1) {
+    return get_path('javascript',$arg1);
+}
+
+function get_views_disk($arg1) {
+    return  $_SERVER['DOCUMENT_ROOT'].'/views/'.$arg1;
+}
+
+function get_controllers_disk($arg1) {
+    return  $_SERVER['DOCUMENT_ROOT'].'/controllers/'.$arg1;
+}
 
 
 ?>

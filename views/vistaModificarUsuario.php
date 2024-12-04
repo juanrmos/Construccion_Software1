@@ -1,3 +1,10 @@
+<?php
+
+require_once $_SERVER['DOCUMENT_ROOT'].'/views/principalBarraNavegacion.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +16,7 @@
 <body>
     <h2 class="title"></h2>
     <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
+
 
 
 function mostrarFormularioBusqueda($mensaje = '')
@@ -23,7 +30,7 @@ function mostrarFormularioBusqueda($mensaje = '')
 ?>
 
     <link rel="stylesheet" href="<?php echo get_urlBase('css/gestion_usuarios.css'); ?>">
-    <form action="/controllers/controladorModificarUsuario.php" method="POST">
+    <form action="<?php echo get_controllers('controladorModificarUsuario.php'); ?>" method="POST">
         <label for="datusuario"> Ubique el usuario a modificar </label>
         <input type="text" name="datusuario" id="datusuario">
         <br>
@@ -62,7 +69,6 @@ function mostrarFormularioModificacion($usuario, $mensaje = '')
 ?>
 </body>
 </html>
-
 
 
 

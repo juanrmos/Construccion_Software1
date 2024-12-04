@@ -38,6 +38,7 @@ function mostrarUsuario($usuarios)
                 </tbody>
             </table>
         </div>
+        
     </body>
     </html>
 <?php

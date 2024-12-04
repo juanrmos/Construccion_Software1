@@ -1,5 +1,5 @@
 <?php
-
+require_once $_SERVER['DOCUMENT_ROOT'].'/views/principalBarraNavegacion.php';
 function mostrarFormularioEliminar($mensaje = '') {
 
 if (!empty($mensaje)){

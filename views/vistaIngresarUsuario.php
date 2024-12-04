@@ -1,5 +1,5 @@
 <?php 
-
+require_once $_SERVER['DOCUMENT_ROOT'].'/views/principalBarraNavegacion.php';
 function mostrarFormularioIngreso ($mensaje) {
     if (empty($mensaje)) {
 

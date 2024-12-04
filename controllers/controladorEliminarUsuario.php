@@ -36,7 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET['username'])) {
     try {
         $modeloUsuario->eliminarUsuario($tmpdatusuario);
         echo "<div class='success-message'>Usuario eliminado con éxito.</div>";
-        echo "<a href='/views/vistaUsuario.php'>Volver a la lista de usuarios</a>";
+        //!Mejorarlo con javascript. Por el momento no es funcional. 
+        echo "<a href='<?php echo get_views('principal.php') . '?opcion=usuarios'; ?>'>Volver a la lista de usuarios</a>";
     } catch (PDOException $e) {
         $mensaje = "hubo un error <br>".$e->getMessage();;
     }

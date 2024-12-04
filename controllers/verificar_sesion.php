@@ -1,11 +1,14 @@
 <?php  
 
 function verificar_sesion() {
-    if (!isset($_SESSION["contrasena"])) {
-        header('Location: '.get_views('vistaInicioSesion.php'));
+    
+    if (!isset($_SESSION["usuario"])) {
+        
+        header('Location: ' . get_views('vistaInicioSesion.php'));
         exit();
     }
 }
+
 
 // function verificar_sesion2() {
 //     if ($_SERVER["REQUEST_METHOD"] !== "POST") {
